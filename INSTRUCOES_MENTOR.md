@@ -1,39 +1,35 @@
 # Como publicar isto para o seu mentorado
 
-Este repositório já está pronto e commitado localmente (veja o resultado
-que o Claude te mostrou). Falta só colocar num lugar que o Claude do seu
-mentorado consiga clonar. Duas opções, escolha uma:
+O repositório já está publicado e a `MENSAGEM_PARA_MENTORADO.md` já tem a
+URL preenchida:
 
-## Opção A — GitHub (recomendado, mais fácil de manter/atualizar depois)
+**https://github.com/smallfiver/extracao-cnpj-nicho**
 
-Se você tem o GitHub CLI (`gh`) autenticado:
+Ele é **privado** — falta só dar acesso ao seu mentorado antes de mandar a
+mensagem.
 
-```bash
-cd "C:\Users\alexw\.claude\skills\extracao-cnpj-nicho"
-gh repo create extracao-cnpj-nicho --private --source=. --remote=origin --push
-```
-
-Isso cria o repositório na sua conta e já sobe o código. Copie a URL que
-aparecer (algo como `https://github.com/SEU_USUARIO/extracao-cnpj-nicho`) e
-cole no lugar de `<URL-DO-REPO>` em `MENSAGEM_PARA_MENTORADO.md`.
-
-Se não tiver o `gh` instalado, crie o repositório manualmente em
-github.com/new (pode ser privado), depois:
+## Dar acesso (repositório privado)
 
 ```bash
-git remote add origin https://github.com/SEU_USUARIO/extracao-cnpj-nicho.git
-git push -u origin main
+gh repo add-collaborator smallfiver/extracao-cnpj-nicho <usuario-github-do-mentorado>
 ```
 
-Se o repositório for **privado**, seu mentorado vai precisar de acesso
-(adicione o GitHub dele como colaborador) ou de um token de acesso para
-clonar.
+Ou pela interface: no repositório, `Settings` → `Collaborators` →
+`Add people`, e digite o usuário ou e-mail do GitHub dele. O GitHub manda um
+convite que ele precisa aceitar antes de conseguir clonar.
 
-## Opção B — Sem GitHub, direto por arquivo
+Se preferir deixar público em vez de dar acesso individual (sem dados
+sensíveis no código, só os scripts):
 
-Se preferir não usar GitHub, é só compactar a pasta inteira
-`extracao-cnpj-nicho` num .zip e mandar pro seu mentorado. Nesse caso, no
-passo 4 da mensagem, troque a instrução de `git clone` por:
+```bash
+gh repo edit smallfiver/extracao-cnpj-nicho --visibility public --accept-visibility-change-consequences
+```
+
+## Sem GitHub — alternativa por arquivo
+
+Se em algum momento preferir não depender do GitHub, compacte a pasta
+inteira `extracao-cnpj-nicho` num .zip e mande direto. Nesse caso, troque o
+passo 4 da mensagem (`git clone ...`) por:
 
 ```
 4. Extraia o arquivo .zip que vou te mandar dentro da pasta
@@ -43,6 +39,15 @@ passo 4 da mensagem, troque a instrução de `git clone` por:
 
 ## Atualizando depois
 
-Se você melhorar a skill no futuro (novos CNAEs, correção de bug), só
-precisa dar `git push` de novo (Opção A) e seu mentorado roda `git pull`
-dentro da pasta da skill dele — não precisa reinstalar nada.
+Se você melhorar a skill no futuro (novos CNAEs, correção de bug), edite os
+arquivos em `C:\Users\alexw\.claude\skills\extracao-cnpj-nicho`, depois:
+
+```bash
+cd "C:\Users\alexw\.claude\skills\extracao-cnpj-nicho"
+git add -A
+git commit -m "descreva a mudanca"
+git push
+```
+
+Seu mentorado só precisa rodar `git pull` dentro da pasta da skill dele —
+não precisa reinstalar nada.

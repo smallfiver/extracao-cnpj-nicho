@@ -1,9 +1,10 @@
 # Mensagem para o mentorado colar no Claude Code dele
 
 Copie tudo dentro da caixa abaixo (do "Estou começando..." até o final) e
-cole numa conversa nova do Claude Code do seu mentorado. Antes de enviar,
-troque `https://github.com/smallfiver/extracao-cnpj-nicho.git` pela URL real do repositório (veja
-`INSTRUCOES_MENTOR.md` na raiz para saber como publicar).
+cole numa conversa nova do Claude Code do seu mentorado. A URL do
+repositório já está preenchida — o repositório é **privado**, então antes
+de mandar, adicione o GitHub do seu mentorado como colaborador (veja
+`INSTRUCOES_MENTOR.md` na raiz).
 
 ---
 
