@@ -1,0 +1,11 @@
+# dados baixados e resultados -- nao versionar (sao grandes e sao do usuario final)
+dados_rf/
+*.zip
+candidatos*.json
+final*.json
+*_cnpjs*.txt
+*_whatsapp.txt
+*_meta_enderecos.txt
+*.csv
+__pycache__/
+*.pyc
