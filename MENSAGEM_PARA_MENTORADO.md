@@ -2,7 +2,7 @@
 
 Copie tudo dentro da caixa abaixo (do "Estou começando..." até o final) e
 cole numa conversa nova do Claude Code do seu mentorado. Antes de enviar,
-troque `<URL-DO-REPO>` pela URL real do repositório (veja
+troque `https://github.com/smallfiver/extracao-cnpj-nicho.git` pela URL real do repositório (veja
 `INSTRUCOES_MENTOR.md` na raiz para saber como publicar).
 
 ---
@@ -25,7 +25,7 @@ ambiente de scraping e instale uma skill de extração de CNPJ por nicho.
 
 4. Clone este repositório dentro da minha pasta de skills do Claude Code
    (crie a pasta .claude/skills se ela não existir):
-   git clone <URL-DO-REPO> .claude/skills/extracao-cnpj-nicho
+   git clone https://github.com/smallfiver/extracao-cnpj-nicho.git .claude/skills/extracao-cnpj-nicho
 
 5. Depois de tudo instalado, teste a skill: baixe a base de dados abertos
    do CNPJ da Receita Federal (o script 01_baixar_base.py dentro da skill
